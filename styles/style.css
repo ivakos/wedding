@@ -1,0 +1,31 @@
+html {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 100;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+.body {
+
+}
+
+.container {
+  background-color: var(--primary);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.section {
+  padding: 0;
+}
+
+@media (max-width: 1439px) {
+  .container {
+    background-color: var(--primary);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    padding: 60px 82px;
+  }
+}
