@@ -1,23 +1,53 @@
+@font-face {
+  font-family: "GreatVibes";
+  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Forum";
+  src: url("../fonts/Forum-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
 html {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 100;
-  font-size: 10px;
+  font-family: Forum;
   scroll-behavior: smooth;
 }
 
-.body {
+.body {}
 
+.color-light {
+  color: #f3ebdd;
+}
+
+.color-dark {
+  color: #2a2922;
+}
+
+.color-green {
+  color: #506d2f;
+}
+
+.color-brown {
+  color: #7d5642;
 }
 
 .container {
   background-color: var(--primary);
   margin: 0 auto;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1920px;
 }
 
 .section {
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 @media (max-width: 1439px) {
@@ -26,6 +56,102 @@ html {
     margin: 0 auto;
     width: 100%;
     max-width: 1440px;
-    padding: 60px 82px;
   }
+}
+
+.large__p {
+  font-size: 70px;
+}
+
+.medium__p {
+  font-size: 50px;
+}
+
+.small__p {
+  font-size: 30px;
+}
+
+/* -------------------------------------------- Greetings section */
+
+.greetings {
+  background-image: url(../images/sec0_0.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 350px 200px;
+}
+
+.greetings>p {
+  letter-spacing: -0.6px;
+  text-indent: -0.6px;
+}
+
+/* -------------------------------------------- Invitation section */
+
+.invitation {
+  padding: 300px 200px;
+  background-image: url(../images/sec4.jpeg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.invitation>p {
+  max-width: 700px;
+}
+
+/* -------------------------------------------- Schedule section */
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 100px 200px;
+  background-color: #2a2922;
+  color: #f3ebdd;
+}
+
+.schedule-header__container {
+  display: flex;
+  gap: 50px;
+}
+
+.schedule-cards__container {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.schedule-card {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.schedule-card__img {
+  border: 1px solid;
+  border-radius: 50%;
+  padding: 5px;
+  max-width: 90px;
+  max-height: 90px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  display: inline-block;
+}
+
+.schedule-card__img::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  bottom: 0;
+  width: 1px;
+  height: 70px;
+  background-color: #f3ebdd;
+}
+
+.schedule-card__description {
+  max-width: 700px;
+  text-align: left;
 }
