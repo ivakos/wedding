@@ -90,7 +90,7 @@ html {
 
 .invitation {
   padding: 300px 200px;
-  background-image: url(../images/sec4.jpeg);
+  background-image: url(../images/sec1_1.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -154,4 +154,14 @@ html {
 .schedule-card__description {
   max-width: 700px;
   text-align: left;
+}
+
+/* -------------------------------------------- Questions section */
+
+.questions {
+  background-image: url(../images/sec4.jpeg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 200px;
 }
