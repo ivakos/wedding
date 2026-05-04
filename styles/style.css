@@ -14,6 +14,7 @@ html {
   --light-color: #f3ebdd;
   --dark-color: #2a2922;
   --green-color: #394139;
+  --light-green-color: #5a685a;
   --brown-color: rgb(60, 47, 22);
   --large-size: 70px;
   --medium-size: 50px;
@@ -128,7 +129,7 @@ a {
 .invitation {
   padding: 150px 0;
   background-image: url(../images/sec1_1.jpg);
-  color: var(--green-color);
+  color: var(--light-green-color);
 }
 
 .invitation>.container {
@@ -259,7 +260,7 @@ a {
 .questions {
   background-image: url(../images/sec4.jpeg);
   gap: 30px;
-  color: var(--dark-color);
+  color: var(--green-color);
 }
 
 .questions>.container {
@@ -276,7 +277,7 @@ a {
 .line {
   height: 1px;
   width: 100%;
-  background-color: var(--dark-color)
+  background-color: var(--green-color)
 }
 
 .questions__item {
@@ -319,7 +320,7 @@ a {
 
 .cross-line {
   position: absolute;
-  background-color: var(--dark-color);
+  background-color: var(--green-color);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
