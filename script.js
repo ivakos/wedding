@@ -1,18 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const preloader = document.getElementById("preloader");
-  const content = document.getElementById("content");
-
-  // даём браузеру применить стили
-  requestAnimationFrame(() => {
-    content.classList.add("visible");
-    preloader.classList.add("hidden");
-  });
-
-  setTimeout(() => {
-    preloader.remove();
-  }, 700);
-});
-
 function toggleText(element) {
   const text = element.querySelector('.text-answer');
   text.classList.toggle('text-answer-open');
