@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "GreatVibes";
-  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "Forum";
   src: url("../fonts/Forum-Regular.ttf") format("truetype");
   font-style: normal;
