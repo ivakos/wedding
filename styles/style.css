@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "GreatVibes";
-  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "Forum";
   src: url("../fonts/Forum-Regular.ttf") format("truetype");
   font-style: normal;
@@ -48,6 +41,104 @@ a {
   margin: 0 auto;
   width: 100%;
   max-width: 1920px;
+}
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, #ffffff 0%, #f7f7f7 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+
+  transition: opacity 0.6s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* контейнер */
+.rings {
+  position: relative;
+  width: 140px;
+  height: 70px;
+
+}
+
+/* ОБЩИЙ СТИЛЬ КОЛЕЦ */
+.ring {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+
+  /* золотой градиент */
+  background: conic-gradient(
+    from 0deg,
+    #f6d365,
+    #fda085,
+    #f6d365,
+    #fff3b0,
+    #d4af37,
+    #f6d365
+  );
+
+  /* делаем "кольцо" */
+  -webkit-mask: radial-gradient(circle, transparent 55%, black 56%);
+  mask: radial-gradient(circle, transparent 55%, black 56%);
+
+  /* свечение */
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6))
+          drop-shadow(0 0 18px rgba(255, 200, 0, 0.3));
+
+  animation: float 2.4s ease-in-out infinite;
+}
+
+/* ЛЕВОЕ КОЛЬЦО */
+.ring1 {
+  left: 0;
+  z-index: 2;
+  animation: rotateLeft 2.5s linear infinite, float 2.4s ease-in-out infinite;
+}
+
+/* ПРАВОЕ КОЛЬЦО */
+.ring2 {
+  right: 0;
+  z-index: 1;
+  animation: rotateRight 2.5s linear infinite, float 2.4s ease-in-out infinite;
+  opacity: 0.95;
+}
+
+/* АНИМАЦИЯ ПЕРЕКРЫТИЯ (имитация переплетения) */
+@keyframes rotateLeft {
+  0%   { transform: rotate(0deg) translateY(0px); }
+  50%  { transform: rotate(180deg) translateY(-3px); }
+  100% { transform: rotate(360deg) translateY(0px); }
+}
+
+@keyframes rotateRight {
+  0%   { transform: rotate(0deg) translateY(0px); }
+  50%  { transform: rotate(-180deg) translateY(3px); }
+  100% { transform: rotate(-360deg) translateY(0px); }
+}
+
+/* лёгкое "дыхание" */
+@keyframes float {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.05); }
+}
+
+/* контент */
+#content {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+#content.visible {
+  opacity: 1;
 }
 
 .section {
