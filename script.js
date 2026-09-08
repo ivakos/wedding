@@ -58,7 +58,7 @@ function renderDigits(id, value) {
 
 function updateTimer() {
   const now = new Date().getTime();
-  const diff = targetDate - now;
+  const diff = now - targetDate;
 
   const d = Math.floor(diff / (1000 * 60 * 60 * 24));
   const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
